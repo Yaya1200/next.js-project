@@ -1,9 +1,15 @@
 import React from 'react'
 import '@/assets/styles/globlas.css';
-function HomePage() {
+
+import { metadata } from './layout';
+const { title, description } =  metadata;
+
+export default function HomePage() {
   return (
-    <div className='text-4xl font-bold'>HomePage</div>
+    <main>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </main>
   )
 }
 
-export default HomePage
