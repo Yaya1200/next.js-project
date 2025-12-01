@@ -1,15 +1,14 @@
 import React from 'react'
 import '@/assets/styles/globlas.css';
+import Link from 'next/link';
 
-import { metadata } from './layout';
-const { title, description } =  metadata;
 
 export default function HomePage() {
   return (
-    <main>
-      <h1>{title}</h1>
-      <p>{description}</p>
-    </main>
+    <div>
+      <h1 className='text-3xl'>Welcome</h1>
+      <Link href="/properties ">Go to properties</Link>
+    </div>
   )
 }
 

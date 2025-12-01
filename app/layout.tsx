@@ -1,11 +1,8 @@
-
 export const metadata = {
   title: 'Property Pulse',
   description: 'Find the perfect rental property',
   keywords: 'rental, property, real estate',
 }
-
-
 
 const MainLayout = ({children}:any)=> {
   return (
