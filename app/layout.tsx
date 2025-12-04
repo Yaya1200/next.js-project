@@ -5,7 +5,7 @@ export const metadata = {
 }
 import Navbar from "./components/Navbar"
 
-const MainLayout = ({children}:any)=> {
+const MainLayout = ({children}:{children:React.ReactNode})=> {
   return (
     <html>
       <head>
