@@ -5,14 +5,14 @@ import getData from "../lib/getdata";
 
 export default function UserItems({ id, name }: { id: number; name: string }) {
   const [post, setPost] = useState<{
-    userId: number;
+    userId: number
     id: number;
     title: string;
     body: string;
   } | null>(null);
 
   const handleCheck = async () => {
-    const result = await getData(id);
+    const result = await getData({id});
     setPost(result);
   };
 

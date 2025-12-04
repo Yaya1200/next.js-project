@@ -1,4 +1,4 @@
-import { promises } from 'dns';
+
 import React from 'react'
 
 export default async  function getData({id}:{id:number}) {
@@ -7,12 +7,10 @@ export default async  function getData({id}:{id:number}) {
     throw new Error("there is an error fetching data")
   }
   const allData = await userData.json();
+
   return (
-    allData.map((element:any)=>{
-    <div key={element.id}>
-   <p>{element.title}</p>
-   <p>{element.body}</p>
-    </div>
-    })
-  )
+      allData
+    
+    )
+  
 }
