@@ -1,5 +1,3 @@
-
-
 const PropertyPage = ({params}:any) => {
   
 
