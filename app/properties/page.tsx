@@ -1,19 +1,16 @@
-import React from 'react';
 import getallusers from '../lib/getallusers';
-import Link from 'next/link';
+import UserItems from './useritem';
 
-async function PropertiesPage() {
-  const data = await getallusers()
+export default async function PropertiesPage() {
+  const data = await getallusers();
 
- const content = <div>
-  {data.map((element:{id:number, name:string})=>{
-   return <p key={element.id}>{element.name}</p>
-    
-  })}
- </div>
   return (
-    content
-  )
+    <div>
+      {data.map((element: { id: number; name: string }) => (
+        <UserItems key={element.id} id={element.id} name={element.name} />
+      ))}
+    </div>
+  );
 }
 
-export default PropertiesPage
+
