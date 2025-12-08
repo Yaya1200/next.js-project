@@ -1,15 +1,13 @@
 import { NextResponse } from "next/server";
 
-export async function POST() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      title: "helloworld",
-      content: "hello world from another world",
-    }),
+export async function DELETE(req:Request) {
+  const {searchParams} = new URL(req.url);
+  const id = searchParams.get("id")
+
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    method: "DELETE",
+  
+   
   });
 
   const data = await response.json();
